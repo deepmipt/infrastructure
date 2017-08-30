@@ -9,3 +9,9 @@
     - name: installing pip3
       apt: pkg=python3-pip
       sudo: yes
+    - name: installing git
+      apt: pkg=git
+      sudo: yes
+    - name: installing screen
+      apt: pkg=screen
+      sudo: yes
