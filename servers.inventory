@@ -1,3 +1,9 @@
-[MLServers]
+[ml_servers]
 dgx1.ipavlov.mipt.ru
 dgx2.ipavlov.mipt.ru
+
+[storage]
+share.ipavlov.mipt.ru
+
+[build_server]
+dev.ipavlov.mipt.ru
