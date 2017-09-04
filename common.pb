@@ -15,6 +15,12 @@
     - name: installing zsh
       apt: pkg=zsh
       become: true
+    - name: installing tmux
+      apt: pkg=tmux
+      become: true
+    - name: installing htop
+      apt: pkg=htop
+      become: true
 
 - hosts: storage
   roles:
