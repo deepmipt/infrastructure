@@ -21,6 +21,16 @@
     - name: installing htop
       apt: pkg=htop
       become: true
+    - name: install russian support
+      apt: pkg=language-pack-ru
+      become: true
+
+- name: Set the locale and the time zone
+  hosts: all
+  become: true
+  tasks:
+    - name: set locale
+      command: /usr/sbin/update-locale LANG=ru_RU.utf8 LC_ALL=ru_RU.utf8
 
 - hosts: storage
   roles:
@@ -38,6 +48,7 @@
           writable: yes
 
 - hosts: build_server
-  roles:
-    - role: ansible-oracle-java
-      become: yes
+  tasks:
+    - name: installing java
+      apt: pkg=default-jdk
+      become: true
