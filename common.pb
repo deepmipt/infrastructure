@@ -52,10 +52,26 @@
     - name: installing java
       apt: pkg=default-jdk
       become: true
-    - name: install elasticsearch
-      apt: pkg=elasticsearch
-      become: true
     - name: installing kibana
       apt:
         deb: https://artifacts.elastic.co/downloads/kibana/kibana-5.5.2-amd64.deb
       become: true
+  roles:
+    - { role: ansible-elasticsearch, es_instance_name: "node1", es_data_dirs: "/opt/elasticsearch/data", es_log_dir: "/opt/elasticsearch/logs", 
+    es_config: {
+        node.name: "node1", 
+        cluster.name: "custom-cluster",
+        discovery.zen.ping.unicast.hosts: "dev.ipavlov.mipt.ru:9300",
+        http.port: 9200,
+        transport.tcp.port: 9300,
+        node.data: false,
+        node.master: true,
+        bootstrap.memory_lock: true,
+        } 
+    }
+  vars:
+    es_scripts: false
+    es_templates: false
+    es_version_lock: false
+    es_heap_size: 1g
+    es_api_port: 9200
