@@ -52,9 +52,8 @@
     - name: installing java
       apt: pkg=default-jdk
       become: true
-    - name: installing elasticsearch
-      apt:
-        deb: https://example.com/python-ppq_0.1-1_all.deb
+    - name: install elasticsearch
+      apt: pkg=elasticsearch
       become: true
     - name: installing kibana
       apt:

@@ -1,3 +1,6 @@
 [submodule "roles/ansible-role-samba"]
 	path = roles/ansible-role-samba
 	url = https://github.com/bertvv/ansible-role-samba.git
+[submodule "roles/ansible-elasticsearch"]
+	path = roles/ansible-elasticsearch
+	url = https://github.com/elastic/ansible-elasticsearch.git
