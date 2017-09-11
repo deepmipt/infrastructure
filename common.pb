@@ -52,3 +52,11 @@
     - name: installing java
       apt: pkg=default-jdk
       become: true
+    - name: installing elasticsearch
+      apt:
+        deb: https://example.com/python-ppq_0.1-1_all.deb
+      become: true
+    - name: installing kibana
+      apt:
+        deb: https://artifacts.elastic.co/downloads/kibana/kibana-5.5.2-amd64.deb
+      become: true
