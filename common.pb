@@ -64,4 +64,4 @@
         node.name: "node1" 
         http.port: 9200
         transport.tcp.port: 9300
-        network.host: 0.0.0.0
+        network.host: _global_
