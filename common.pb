@@ -65,3 +65,9 @@
         http.port: 9200
         transport.tcp.port: 9300
         network.host: _global_
+
+- hosts: ml_servers
+  tasks:
+    - name: installing python3-dev
+      apt: pkg=python3-dev
+      become: true
