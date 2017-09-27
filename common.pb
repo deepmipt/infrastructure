@@ -56,15 +56,15 @@
       apt:
         deb: https://artifacts.elastic.co/downloads/kibana/kibana-5.5.2-amd64.deb
       become: true
-  roles:
-    - role: ansible-elasticsearch 
-      become: true
-      es_instance_name: "node1"
-      es_config:
-        node.name: "node1" 
-        http.port: 9200
-        transport.tcp.port: 9300
-        network.host: _global_
+  #roles:
+  #  - role: ansible-elasticsearch 
+  #    become: true
+  #    es_instance_name: "node1"
+  #    es_config:
+  #      node.name: "node1" 
+  #      http.port: 9200
+  #      transport.tcp.port: 9300
+  #      network.host: _global_
 
 - hosts: ml_servers
   tasks:
