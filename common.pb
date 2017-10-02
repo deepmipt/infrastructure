@@ -71,3 +71,6 @@
     - name: installing python3-dev
       apt: pkg=python3-dev
       become: true
+    - name: installing zlib1g-dev
+      apt: pkg=zlib1g-dev
+      become: true
