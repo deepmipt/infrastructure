@@ -74,3 +74,6 @@
     - name: installing zlib1g-dev
       apt: pkg=zlib1g-dev
       become: true
+    - name: installing libjpeg8-dev
+      apt: pkg=libjpeg8-dev
+      become: true
