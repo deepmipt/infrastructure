@@ -77,3 +77,6 @@
     - name: installing libjpeg8-dev
       apt: pkg=libjpeg8-dev
       become: true
+    - name: installing python3-venv
+      apt: pkg=python3-venv
+      become: true
