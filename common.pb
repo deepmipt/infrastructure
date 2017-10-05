@@ -3,6 +3,9 @@
     - name: installing tree
       apt: pkg=tree
       become: true
+    - name: installing curl
+      apt: pkg=curl
+      become: true
     - name: installing pip3
       apt: pkg=python3-pip
       become: true
