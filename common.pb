@@ -27,6 +27,9 @@
     - name: install russian support
       apt: pkg=language-pack-ru
       become: true
+    - name: installing p7zip-full
+      apt: p7zip-full
+      become: true
 
 - name: Set the locale and the time zone
   hosts: all
